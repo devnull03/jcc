@@ -17,6 +17,7 @@
         href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&family=Rampart+One&display=swap"
         rel="stylesheet"
     />
+     <script src="https://cdn.tailwindcss.com"></script>
 </svelte:head>
 
 
