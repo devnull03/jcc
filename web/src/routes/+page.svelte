@@ -38,7 +38,7 @@
         >CULTURE　CLUB　友達　EXPLORE　楽しい　時間　アイスブレーカー
     </span>
 
-    <LeftDotGrid class="fixed top-10 left-10 lg:scale-100 scale-50" />
+    <LeftDotGrid class="fixed lg:top-10 lg:left-10 -top-14 -left-2 lg:scale-100 scale-50" />
 
     <LeftLinesThingy class="fixed top-1/3 left-7" />
 
@@ -108,7 +108,7 @@
     </div>
 
     <div
-        class="hidden rounded-r rounded-bl-xl bg-[url(/texture.jpg)] bg-theme-main w-[32vw] p-4 fixed right-72 font-notoSerifJP font-bold text-xl top-1/2"
+        class="rounded-r rounded-bl-xl border border-theme-obj desc text-theme-main lg:w-[32vw] w-[50vw] h-[20vh] lg:h-fit overflow-scroll lg:p-4 p-2 fixed lg:right-72 right-32 font-notoSerifJP font-bold lg:text-xl text-sm lg:top-1/2"
     >
         2024 年 10 月 18 日 (金) 午後 5 時から午後 8
         時まで開催される毎年恒例のアイスブレイク イベントにぜひご参加ください。
@@ -146,6 +146,10 @@
     .heading-text {
         /* border: 2px solid #FCF1FD; */
         /* -webkit-text-stroke: 2px #FCF1FD; */
+    }
+
+    .desc {
+        
     }
 
     @keyframes spin {
