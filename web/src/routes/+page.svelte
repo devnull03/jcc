@@ -81,25 +81,25 @@
         class="fixed lg:bottom-32 lg:right-32 md:bottom-32 md:right-32 right-6 bottom-16 lg:scale-125 md:scale-125 scale-75"
     />
     <Circles
-        class="fixed lg:top-32 lg:right-40 md:top-32 top-24 right-8 md:right-40 lg:scale-125 md:scale-125 scale-90"
+        class="fixed lg:top-32 lg:right-40 md:top-32 top-16 right-8 md:right-40 lg:scale-125 md:scale-125 scale-90"
     />
 
     <div
         class="fixed lg:top-12 md:top-12 top-14 lg:left-40 md:left-40 left-12 font-rampartOne w-fit z-50"
     >
         <div
-            class="lg:text-[10rem] md:text-[10rem] text-8xl text-theme-main relative leading-tight heading-text"
+            class="lg:text-[10rem] md:text-[10rem] text-7xl text-theme-main relative leading-tight heading-text"
         >
             <span
-                class="uppercase lg:text-2xl md:text-2xl text-lg absolute -rotate-[5deg] lg:left-6 md:left-6"
+                class="uppercase lg:text-2xl md:text-2xl text-base absolute -rotate-[5deg] lg:left-6 md:left-6"
                 >japanese</span
             >
             <span
-                class="uppercase lg:text-2xl md:text-2xl text-lg absolute -rotate-[5deg] lg:left-1/2 md:left-1/2 lg:top-0 md:top-0 top-1/3"
+                class="uppercase lg:text-2xl md:text-2xl text-base absolute -rotate-[5deg] lg:left-1/2 md:left-1/2 lg:top-0 md:top-0 top-1/3"
                 >culture</span
             >
             <span
-                class="uppercase lg:text-2xl md:text-2xl text-lg absolute -rotate-[5deg] lg:top-1/2 md:top-1/2 top-2/3 lg:left-6 md:left-6"
+                class="uppercase lg:text-2xl md:text-2xl text-base absolute -rotate-[5deg] lg:top-1/2 md:top-1/2 top-2/3 lg:left-6 md:left-6"
                 >club</span
             >
 
