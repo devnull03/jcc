@@ -1,0 +1,1 @@
+export const env={"PUBLIC_DOMAIN":"https://devnull03.github.io/jcc","PUBLIC_COMPANY_NAME":"Japanese Culture Club"}
