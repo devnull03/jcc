@@ -108,7 +108,7 @@
     </div>
 
     <div
-        class="rounded-r rounded-bl-xl border border-theme-obj desc text-theme-main lg:w-[32vw] w-[50vw] h-[20vh] lg:h-fit overflow-scroll lg:p-4 p-2 fixed lg:right-72 right-32 font-notoSerifJP font-bold lg:text-xl text-sm lg:top-1/2"
+        class="rounded-r rounded-bl-xl border border-theme-obj desc text-theme-main lg:w-[32vw] w-[50vw] h-[13vh] lg:h-fit overflow-scroll lg:p-4 p-2 fixed lg:right-72 right-32 font-notoSerifJP font-bold lg:text-xl text-sm lg:top-1/2"
     >
         2024 年 10 月 18 日 (金) 午後 5 時から午後 8
         時まで開催される毎年恒例のアイスブレイク イベントにぜひご参加ください。
