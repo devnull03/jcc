@@ -53,14 +53,14 @@
     </div>
 
     <div
-        class="fixed origin-center outer-spin -bottom-52 -left-56 lg:-bottom-16 lg:left-8"
+        class="fixed origin-center outer-spin -bottom-52 -left-56 lg:-bottom-[9vh] lg:left-[3vw]"
     >
-        <OuterCircleThingy class="scale-50 lg:scale-100" />
+        <OuterCircleThingy class="lg:h-[70vh] lg:w-[70vh] scale-50 lg:scale-100" />
     </div>
     <div
-        class="fixed origin-center inner-spin bottom-4 left-1 lg:bottom-40 lg:left-64"
+        class="fixed origin-center inner-spin bottom-4 left-1 lg:bottom-[11vh] lg:left-[16vw]"
     >
-        <MiddleCircleThingy class="scale-50 lg:scale-100" />
+        <MiddleCircleThingy class="lg:h-[30vh] lg:w-[30vh] scale-50 lg:scale-100" />
     </div>
     <!-- <div
         class="fixed hidden bottom-40 left-[9.3rem] lg:bottom-[20rem] lg:left-[22rem] md:bottom-[20rem] md:left-[22rem]"
@@ -78,17 +78,17 @@
     <!-- <iframe class="rounded-lg" width="300" height="300" src="https://www.youtube-nocookie.com/embed/RJUvNVCqtpI?si=vMKTeZdj54ChSMMz&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
 
     <RightSquaresThing
-        class="fixed lg:bottom-32 lg:right-32 md:bottom-32 md:right-32 right-6 bottom-16 lg:scale-125 md:scale-125 scale-75"
+        class="fixed lg:bottom-[10vh] lg:right-[10vw] md:bottom-32 md:right-32 right-6 bottom-16 lg:scale-100 scale-75 lg:h-[50vh]"
     />
     <Circles
-        class="fixed lg:top-32 lg:right-40 md:top-32 top-16 right-8 md:right-40 lg:scale-125 md:scale-125 scale-90"
+        class="fixed lg:top-[10vh] lg:right-[10vw] md:top-32 top-16 right-8 md:right-40 lg:scale-100 scale-90 lg:h-[30vh]"
     />
 
     <div
-        class="fixed lg:top-12 md:top-12 top-14 lg:left-40 md:left-40 left-12 font-rampartOne w-fit z-50"
+        class="fixed lg:top-12 top-14 lg:left-[10vw] left-12 font-rampartOne w-fit z-50"
     >
         <div
-            class="lg:text-[10rem] md:text-[10rem] text-7xl text-theme-main relative leading-tight heading-text"
+            class="lg:text-[18vh] text-7xl text-theme-main relative leading-tight heading-text"
         >
             <span
                 class="uppercase lg:text-2xl md:text-2xl text-base absolute -rotate-[5deg] lg:left-6 md:left-6"
