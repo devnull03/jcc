@@ -1,6 +1,6 @@
 <script>
 
-    import { currentTheme } from "$lib/stores";
+    import { currentTheme } from "$lib/stores/stores";
 
 </script>
 <!-- svelte-ignore a11y-no-static-element-interactions -->

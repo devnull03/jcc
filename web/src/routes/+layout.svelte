@@ -1,8 +1,14 @@
 <script>
     import { PUBLIC_COMPANY_NAME } from "$env/static/public";
-    import Footer from "$lib/Footer.svelte";
-    import Header from "$lib/Header.svelte";
+    import Cursor from "$lib/components/Cursor.svelte";
+    import { onMount } from "svelte";
     import "../app.css";
+    import { cursorProperties } from "$lib/stores/cursor";
+
+    onMount(() => {
+        $cursorProperties.hidden = true;
+        $cursorProperties.inverted = true;
+    });
 </script>
 
 <svelte:head>
@@ -17,9 +23,8 @@
         href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&family=Rampart+One&display=swap"
         rel="stylesheet"
     />
-     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </svelte:head>
-
 
 <!-- <div class="h-screen flex flex-col justify-between">
   <Header /> 
@@ -28,5 +33,6 @@
   </main>
   <Footer />
 </div> -->
+<Cursor />
 
 <slot />

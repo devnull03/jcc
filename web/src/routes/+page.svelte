@@ -9,7 +9,7 @@
     import ScatteredLines from "$lib/assets/ScatteredLines.svelte";
     import ScatteredSquares from "$lib/assets/ScatteredSquares.svelte";
     import Button from "$lib/components/ui/button/button.svelte";
-    import { currentTheme } from "$lib/stores";
+    import { currentTheme } from "$lib/stores/stores";
     import { onMount } from "svelte";
 
     onMount(() => {
@@ -117,7 +117,7 @@
         to 8:00pm.
     </div>
 
-    <div class="fixed top-12 right-12 z-10">
+    <div class="fixed top-12 right-12 z-10 hidden">
         <Button
             on:click={() => {
                 $currentTheme === "default"

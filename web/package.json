@@ -28,6 +28,7 @@
 		"@sveltejs/adapter-vercel": "^5.4.4",
 		"bits-ui": "^0.21.16",
 		"clsx": "^2.1.1",
+		"gsap": "^3.12.5",
 		"tailwind-merge": "^2.5.3",
 		"tailwind-variants": "^0.2.1"
 	}
