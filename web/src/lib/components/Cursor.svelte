@@ -47,7 +47,7 @@
 <svelte:window on:mousemove={onMouseMove} />
 
 <div
-    class="fixed border-2 rounded-full transition-transform pointer-events-none bg-transparent z-[9999]"
+    class="fixed hidden lg:block md:block border-2 rounded-full transition-transform pointer-events-none bg-transparent z-[9999]"
     class:backdrop-invert={$cursorProperties.inverted}
     style:padding={`${$cursorProperties.radius}px`}
     style:top={`${$mouseCoords.y - $cursorProperties.radius}px`}
