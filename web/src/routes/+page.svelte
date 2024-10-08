@@ -9,12 +9,31 @@
     import ScatteredLines from "$lib/assets/ScatteredLines.svelte";
     import ScatteredSquares from "$lib/assets/ScatteredSquares.svelte";
     import Button from "$lib/components/ui/button/button.svelte";
+    import { horizontalLoop } from "$lib/helpers/horizontalLoop";
     import { currentTheme } from "$lib/stores/stores";
     import { onMount } from "svelte";
+    import gsap from "gsap";
 
     onMount(() => {
         currentTheme.subscribe((value) => {
             document.getElementsByTagName("html")[0].dataset.theme = value;
+        });
+
+        const leftBorderWords = gsap.utils.toArray(".border-word-left");
+        const rightBorderWords = gsap.utils.toArray(".border-word-right");
+
+        const leftLoop = horizontalLoop(leftBorderWords, {
+            paused: false,
+            repeat: -1,
+            speed: 0.5,
+            reversed: true,
+        }); 
+
+        const rightLoop = horizontalLoop(rightBorderWords, {
+            paused: false,
+            repeat: -1,
+            speed: 0.5,
+            // reversed: true,
         });
     });
 </script>
@@ -30,15 +49,31 @@
     <Corner class="fixed rotate-180 bottom-4 right-4 fill-theme-main" />
 
     <span
-        class="border-text origin-top-left rotate-90 fixed top-14 left-6 text-theme-main w-[100vh]"
-        >CULTURE　CLUB　友達　EXPLORE　楽しい　時間　アイスブレーカー
+        class="border-text origin-top-left rotate-90 fixed top-14 left-6 w-[50vh] whitespace-nowrap"
+    >
+        <span class="border-word-left">CULTURE </span>
+        <span class="border-word-left">CLUB </span>
+        <span class="border-word-left">友達 </span>
+        <span class="border-word-left">EXPLORE </span>
+        <span class="border-word-left">楽しい </span>
+        <span class="border-word-left">時間 </span>
+        <span class="border-word-left">アイスブレーカー</span>
     </span>
     <span
-        class="border-text text-right origin-bottom-right rotate-90 fixed bottom-14 right-7 text-theme-main w-[100vh]"
-        >CULTURE　CLUB　友達　EXPLORE　楽しい　時間　アイスブレーカー
+        class="border-text text-right origin-bottom-right rotate-90 fixed bottom-14 right-7 w-[50vh] whitespace-nowrap"
+    >
+        <span class="border-word-right">CULTURE </span>
+        <span class="border-word-right">CLUB </span>
+        <span class="border-word-right">友達 </span>
+        <span class="border-word-right">EXPLORE </span>
+        <span class="border-word-right">楽しい </span>
+        <span class="border-word-right">時間 </span>
+        <span class="border-word-right">アイスブレーカー</span>
     </span>
 
-    <LeftDotGrid class="fixed lg:top-10 lg:left-10 -top-14 -left-2 lg:scale-100 scale-50" />
+    <LeftDotGrid
+        class="fixed lg:top-10 lg:left-10 -top-14 -left-2 lg:scale-100 scale-50"
+    />
 
     <LeftLinesThingy class="fixed top-1/3 left-7" />
 
@@ -55,12 +90,16 @@
     <div
         class="fixed origin-center outer-spin -bottom-52 -left-56 lg:-bottom-[9vh] lg:left-[3vw]"
     >
-        <OuterCircleThingy class="lg:h-[70vh] lg:w-[70vh] scale-50 lg:scale-100" />
+        <OuterCircleThingy
+            class="lg:h-[70vh] lg:w-[70vh] scale-50 lg:scale-100"
+        />
     </div>
     <div
         class="fixed origin-center inner-spin bottom-4 left-1 lg:bottom-[11vh] lg:left-[16vw]"
     >
-        <MiddleCircleThingy class="lg:h-[30vh] lg:w-[30vh] scale-50 lg:scale-100" />
+        <MiddleCircleThingy
+            class="lg:h-[30vh] lg:w-[30vh] scale-50 lg:scale-100"
+        />
     </div>
     <!-- <div
         class="fixed hidden bottom-40 left-[9.3rem] lg:bottom-[20rem] lg:left-[22rem] md:bottom-[20rem] md:left-[22rem]"
@@ -132,7 +171,7 @@
 
 <style type="postcss">
     .border-text {
-        @apply font-jsmath text-xs italic font-semibold tracking-[0.25em];
+        @apply font-jsmath text-xs italic font-semibold tracking-[0.25em] text-theme-main flex items-center gap-3 overflow-hidden;
     }
 
     .inner-spin {
@@ -149,7 +188,6 @@
     }
 
     .desc {
-        
     }
 
     @keyframes spin {
