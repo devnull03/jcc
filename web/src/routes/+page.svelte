@@ -65,7 +65,6 @@
                 ease: "power1.inOut",
                 repeatRefresh: true,
                 repeat: -1,
-                position: "start",
             });
         });
 
@@ -76,7 +75,6 @@
             ease: "power1.inOut",
             repeatRefresh: true,
             repeat: -1,
-            position: "start",
         });
 
         // -------------------------------------------------------------
