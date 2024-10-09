@@ -14,10 +14,17 @@
     import { onMount } from "svelte";
     import gsap from "gsap";
 
+    // const InertiaPlugin = require("https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/InertiaPlugin.min.js");
+
+    // gsap.registerPlugin(InertiaPlugin);
+
+    let floatingThings: gsap.TweenTarget[];
     onMount(() => {
         currentTheme.subscribe((value) => {
             document.getElementsByTagName("html")[0].dataset.theme = value;
         });
+
+        // border text animation --------------------------------------
 
         const leftBorderWords = gsap.utils.toArray(".border-word-left");
         const rightBorderWords = gsap.utils.toArray(".border-word-right");
@@ -27,7 +34,7 @@
             repeat: -1,
             speed: 0.5,
             reversed: true,
-        }); 
+        });
 
         const rightLoop = horizontalLoop(rightBorderWords, {
             paused: false,
@@ -35,8 +42,56 @@
             speed: 0.5,
             // reversed: true,
         });
+
+        // -------------------------------------------------------------
+
+        // floating things animation -----------------------------------
+
+        floatingThings = gsap.utils.toArray(".floating-thing");
+
+        // const floatingTl = gsap.timeline({
+        //     repeat: -1,
+        //     // yoyo: true,
+        //     defaults: { duration: 3, ease: "power1.inOut" },
+        //     repeatRefresh: true,
+        // });
+
+        floatingThings.forEach((thing) => {
+            gsap.to(thing, {
+                x: "random(-10, 10)",
+                y: "random(-10, 10)",
+                rotation: "random(-5, 5)",
+                duration: 3,
+                ease: "power1.inOut",
+                repeatRefresh: true,
+                repeat: -1,
+                position: "start",
+            });
+        });
+
+        gsap.to(".heading-text", {
+            x: "random(-10, 10)",
+            y: "random(-10, 10)",
+            duration: 3,
+            ease: "power1.inOut",
+            repeatRefresh: true,
+            repeat: -1,
+            position: "start",
+        });
+
+        // -------------------------------------------------------------
     });
 </script>
+
+<svelte:window
+    on:mousemove={(event) =>
+        gsap.to(".floating-thing-wrapper", {
+            // inertia: {
+                x: - event.clientX / 100,
+                y: - event.clientY / 100,
+            // },
+        })}
+/>
 
 <main
     class="w-screen h-screen {$currentTheme === 'blue'
@@ -49,7 +104,7 @@
     <Corner class="fixed rotate-180 bottom-4 right-4 fill-theme-main" />
 
     <span
-        class="border-text origin-top-left rotate-90 fixed top-14 left-6 w-[50vh] whitespace-nowrap"
+        class="border-text origin-top-left rotate-90 fixed top-14 left-6 w-[40vh] whitespace-nowrap"
     >
         <span class="border-word-left">CULTURE </span>
         <span class="border-word-left">CLUB </span>
@@ -57,10 +112,10 @@
         <span class="border-word-left">EXPLORE </span>
         <span class="border-word-left">楽しい </span>
         <span class="border-word-left">時間 </span>
-        <span class="border-word-left">アイスブレーカー</span>
+        <span class="border-word-left pr-3">アイスブレーカー</span>
     </span>
     <span
-        class="border-text text-right origin-bottom-right rotate-90 fixed bottom-14 right-7 w-[50vh] whitespace-nowrap"
+        class="border-text text-right origin-bottom-right rotate-90 fixed bottom-14 right-7 w-[40vh] whitespace-nowrap"
     >
         <span class="border-word-right">CULTURE </span>
         <span class="border-word-right">CLUB </span>
@@ -77,7 +132,9 @@
 
     <LeftLinesThingy class="fixed top-1/3 left-7" />
 
-    <div class="flex w-screen fixed -top-1 left-20 justify-center">
+    <div
+        class="flex w-screen fixed -top-1 left-20 justify-center "
+    >
         <ScatteredSquares class="fixed lg:scale-100 scale-50" />
     </div>
 
@@ -116,15 +173,21 @@
     <!-- <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/3i3lIKOwRrgjqXE4szznpN?utm_source=generator" width="100%" height="300" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> -->
     <!-- <iframe class="rounded-lg" width="300" height="300" src="https://www.youtube-nocookie.com/embed/RJUvNVCqtpI?si=vMKTeZdj54ChSMMz&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
 
-    <RightSquaresThing
-        class="fixed lg:bottom-[10vh] lg:right-[10vw] md:bottom-32 md:right-32 right-6 bottom-16 lg:scale-100 scale-75 lg:h-[50vh]"
-    />
-    <Circles
-        class="fixed lg:top-[10vh] lg:right-[10vw] md:top-32 top-16 right-8 md:right-40 lg:scale-100 scale-90 lg:h-[30vh]"
-    />
+    <div
+        class="fixed lg:bottom-[10vh] lg:right-[10vw] md:bottom-32 md:right-32 right-6 bottom-16 floating-thing-wrapper"
+    >
+        <RightSquaresThing
+            class="lg:scale-100 scale-75 lg:h-[50vh] floating-thing right-squares"
+        />
+    </div>
+    <div
+        class="fixed lg:top-[10vh] lg:right-[10vw] md:top-32 top-16 right-8 md:right-40 floating-thing-wrapper"
+    >
+        <Circles class="lg:scale-100 scale-90 lg:h-[30vh] floating-thing" />
+    </div>
 
     <div
-        class="fixed lg:top-12 top-14 lg:left-[10vw] left-12 font-rampartOne w-fit z-50"
+        class="fixed lg:top-12 top-14 lg:left-[10vw] left-12 font-rampartOne w-fit z-50 floating-thing-wrapper"
     >
         <div
             class="lg:text-[18vh] text-7xl text-theme-main relative leading-tight heading-text"
