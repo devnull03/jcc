@@ -208,16 +208,35 @@
     </div>
 
     <div
-        class="rounded-r rounded-bl-xl border border-theme-obj desc lg:w-[32vw] w-[50vw] h-[13vh] lg:h-fit overflow-scroll fixed lg:right-[22vw] right-32 font-notoSerifJP font-bold lg:text-xl text-sm lg:top-1/2"
+        class="lg:top-1/2 fixed lg:right-[22vw] right-32 flex flex-col lg:items-end lg:gap-10 gap-1 lg:w-[32vw] w-[50vw]"
     >
-        <p class="lg:p-4 p-2 bg-[var(--theme-desc-bg)] text-[var(--theme-desc-text)]">
-            2024 年 10 月 18 日 (金) 午後 5 時から午後 8
-            時まで開催される毎年恒例のアイスブレイク
-            イベントにぜひご参加ください。
-            <br /> <br />
-            Join us in our annual ice breaking event on October 18, 2024 (Friday)
-            5:00pm to 8:00pm.
-        </p>
+        <div
+            class="rounded-r rounded-bl-xl border border-theme-obj desc h-[13vh] lg:h-[20vh] overflow-scroll font-notoSerifJP font-bold lg:text-xl text-sm"
+        >
+            <p
+                class="lg:p-4 p-2 h-full overflow-auto bg-[var(--theme-desc-bg)] text-[var(--theme-desc-text)]"
+            >
+                2024 年 10 月 18 日 (金) 午後 5 時から午後 8
+                時まで開催される毎年恒例のアイスブレイク
+                イベントにぜひご参加ください。
+                <br /> <br />
+                Join us in our annual ice breaking event on October 18, 2024 (Friday)
+                5:00pm to 8:00pm.
+            </p>
+        </div>
+
+        <a
+            href="https://campus.hellorubric.com/?s=8981"
+            class="lg:w-32 relative leading-5 lg:tracking-[0.25em] text-theme-main font-jsmath font-medium italic"
+        >
+            <p class="lg:hidden w-full absolute font-notoSerifJP text-xs font-bold">Click here for rubric link 🔗</p>
+            <span
+                class="hidden lg:block uppercase break-all absolute -left-4 bottom-4 h-fit w-2"
+                >Rubric</span
+            >
+            <img src="/jcc-qr-code.png" alt="" class="hidden lg:block" />
+            <span class="uppercase hidden lg:block">link</span>
+        </a>
     </div>
 
     <div class="fixed top-12 right-12 z-10 hidden">
