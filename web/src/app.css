@@ -7,18 +7,26 @@
     --theme-bg-color: #EDEDED;
     --theme-main-color: #000;
     --theme-obj-color: #000;
+    --theme-desc-bg: #ededed7b;
+    --theme-desc-text: #000;
   }
 
   html[data-theme='pink'] {
     --theme-bg-color: #EDEDED;
     --theme-main-color: #EA3FB8;
     --theme-obj-color: #EA3FB8;
+
+    --theme-desc-bg: #ea3fb788;
+    --theme-desc-text: white;
   }
 
   html[data-theme='blue'] {
     --theme-bg-color: 'linear-gradient(0deg,_#EDEDED,_#EDEDED),linear-gradient(180deg,_rgba(0,_38,_255,_0.7)_50.26%,_rgba(0,_208,_255,_0.7)_100%)';
     --theme-main-color: #EF99BE;
     --theme-obj-color: #F9E970;
+
+    --theme-desc-bg: #ea3fb783;
+    --theme-desc-text: white;
   }
 }
  

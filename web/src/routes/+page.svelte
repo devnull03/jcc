@@ -87,8 +87,8 @@
     on:mousemove={(event) =>
         gsap.to(".floating-thing-wrapper", {
             // inertia: {
-                x: - event.clientX / 100,
-                y: - event.clientY / 100,
+            x: -event.clientX / 100,
+            y: -event.clientY / 100,
             // },
         })}
 />
@@ -132,9 +132,7 @@
 
     <LeftLinesThingy class="fixed top-1/3 left-7" />
 
-    <div
-        class="flex w-screen fixed -top-1 left-20 justify-center "
-    >
+    <div class="flex w-screen fixed -top-1 left-20 justify-center">
         <ScatteredSquares class="fixed lg:scale-100 scale-50" />
     </div>
 
@@ -210,13 +208,16 @@
     </div>
 
     <div
-        class="rounded-r rounded-bl-xl border border-theme-obj desc text-theme-main lg:w-[32vw] w-[50vw] h-[13vh] lg:h-fit overflow-scroll lg:p-4 p-2 fixed lg:right-72 right-32 font-notoSerifJP font-bold lg:text-xl text-sm lg:top-1/2"
+        class="rounded-r rounded-bl-xl border border-theme-obj desc lg:w-[32vw] w-[50vw] h-[13vh] lg:h-fit overflow-scroll fixed lg:right-[22vw] right-32 font-notoSerifJP font-bold lg:text-xl text-sm lg:top-1/2"
     >
-        2024 年 10 月 18 日 (金) 午後 5 時から午後 8
-        時まで開催される毎年恒例のアイスブレイク イベントにぜひご参加ください。
-        <br /> <br />
-        Join us in our annual ice breaking event on October 18, 2024 (Friday) 5:00pm
-        to 8:00pm.
+        <p class="lg:p-4 p-2 bg-[var(--theme-desc-bg)] text-[var(--theme-desc-text)]">
+            2024 年 10 月 18 日 (金) 午後 5 時から午後 8
+            時まで開催される毎年恒例のアイスブレイク
+            イベントにぜひご参加ください。
+            <br /> <br />
+            Join us in our annual ice breaking event on October 18, 2024 (Friday)
+            5:00pm to 8:00pm.
+        </p>
     </div>
 
     <div class="fixed top-12 right-12 z-10 hidden">
@@ -247,10 +248,16 @@
 
     .heading-text {
         /* border: 2px solid #FCF1FD; */
-        /* -webkit-text-stroke: 2px #FCF1FD; */
+        -webkit-text-stroke: 2px #fff;
+    }
+    .heading-text span {
+        /* border: 2px solid #FCF1FD; */
+        -webkit-text-stroke: 1px #fff;
     }
 
     .desc {
+        background-image: url("/texture.jpg");
+        /* mask-image: image(url("/texture.jpg")); */
     }
 
     @keyframes spin {
