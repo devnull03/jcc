@@ -25,7 +25,7 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/InertiaPlugin.min.js"></script>
+    <!-- <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/InertiaPlugin.min.js"></script> -->
 </svelte:head>
 
 <!-- <div class="h-screen flex flex-col justify-between">
